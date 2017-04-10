@@ -1,0 +1,23 @@
+Description: Fix segfault due to spidermonkey GC bug when built with gcc 6
+Last-Update: 2016-09-15
+
+--- a/js/src/configure.in.orig	2016-09-15 17:56:24.625770342 +0200
++++ b/js/src/configure.in	2016-09-15 17:56:33.477443832 +0200
+@@ -3560,6 +3560,16 @@
+ fi
+ 
+ dnl ========================================================
++dnl = Disable -fdelete-null-pointer-checks with GCC >= 6.0.
++dnl ========================================================
++if test -n "$GNU_CC" -a -z "$CLANG_CC"; then
++    if test "$GCC_MAJOR_VERSION" -ge "6" ; then
++        CFLAGS="$CFLAGS -fno-delete-null-pointer-checks"
++        CXXFLAGS="$CXXFLAGS -fno-delete-null-pointer-checks"
++    fi
++fi
++
++dnl ========================================================
+ dnl = Link js shell to system readline
+ dnl ========================================================
+ MOZ_ARG_ENABLE_BOOL(readline,
+

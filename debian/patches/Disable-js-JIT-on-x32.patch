@@ -1,0 +1,17 @@
+Description: Disable the js JIT on x32.
+Author: Adam Borowski <kilobyte@angband.pl>
+---
+ js/src/configure.in |    2 ++
+ 1 file changed, 2 insertions(+)
+
+--- a/js/src/configure.in
++++ b/js/src/configure.in
+@@ -2096,6 +2096,8 @@ fi
+ dnl Configure JIT support
+ 
+ case "$target" in
++x86_64*-gnux32)
++    ;;
+ i?86-*)
+     ENABLE_ION=1
+     AC_DEFINE(JS_CPU_X86)

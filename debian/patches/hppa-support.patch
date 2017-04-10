@@ -1,0 +1,24 @@
+--- mozjs24-24.2.0.orig/js/src/gc/RootMarking.cpp
++++ mozjs24-24.2.0/js/src/gc/RootMarking.cpp
+@@ -320,7 +320,7 @@ MarkConservativeStackRoots(JSTracer *trc
+ 
+     uintptr_t *stackMin, *stackEnd;
+ #if JS_STACK_GROWTH_DIRECTION > 0
+-    stackMin = rt->nativeStackBase;
++    stackMin = reinterpret_cast<uintptr_t *>(rt->nativeStackBase);
+     stackEnd = cgcd->nativeStackTop;
+ #else
+     stackMin = cgcd->nativeStackTop + 1;
+--- mozjs24-24.2.0.orig/js/src/jsapi.cpp
++++ mozjs24-24.2.0/js/src/jsapi.cpp
+@@ -863,10 +863,6 @@ JSRuntime::JSRuntime(JSUseHelperThreads
+ 
+     PodZero(&debugHooks);
+     PodZero(&atomState);
+-
+-#if JS_STACK_GROWTH_DIRECTION > 0
+-    nativeStackLimit = UINTPTR_MAX;
+-#endif
+ }
+ 
+ bool

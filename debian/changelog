@@ -1,0 +1,198 @@
+mozjs38 (38.2.1~rc0-0ubuntu5) zesty; urgency=medium
+
+  * Drop the libmozjs38-bin package, see Mozilla #1339931
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Wed, 01 Mar 2017 17:55:56 -0500
+
+mozjs38 (38.2.1~rc0-0ubuntu4) zesty; urgency=medium
+
+  * Add back dh_strip rules but with --dbgsym-migration to fix very
+    large binary packages in the last upload.
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Sat, 18 Feb 2017 16:22:25 -0500
+
+mozjs38 (38.2.1~rc0-0ubuntu3) zesty; urgency=medium
+
+  * Really drop manual -dbg packages
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Fri, 17 Feb 2017 17:59:49 -0500
+
+mozjs38 (38.2.1~rc0-0ubuntu2) zesty; urgency=medium
+
+  * debian/control:
+    - Build-Depend on libicu-dev, libreadline-dev and python-dev
+  * debian/rules: Copy these build flags from Fedora:
+    --with-system-icu
+    --with-system-zlib
+    --enable-readline
+    --enable-xterm-updates
+    --enable-shared-js
+    --enable-gcgenerational
+    --disable-optimize
+    --enable-pie
+  * debian/rules:
+    - Also use --enable-tests but don't make tests fatal yet
+    - Use --with-intl-api as recommended by gjs developer
+  * Don't install .a file
+  * Bump dh compat to 10 but disable autoreconf until it can be made to work
+  * Drop manual -dbg packages
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Fri, 17 Feb 2017 17:32:04 -0500
+
+mozjs38 (38.2.1~rc0-0ubuntu1) zesty; urgency=medium
+
+  [ Rico Tzschichholz]
+  * New upstream release (LP: #1662094)
+  * Update version from mozjs24 to mozjs38
+  * debian/control, debian/rules:
+    - Build with autoconf2.13
+  * Add patches:
+    - copy-headers.patch:
+      + Copy headers instead of symlinking
+    - fix-gcc6-segfault.patch
+      + Fix segfault when built with gcc6
+    - fix-tracelogger.patch
+      + Squashed version of several commits to fix the tracelogger
+    - install-js-config-h.patch
+    - pkg-config-version.patch:
+      + Add major version to pkg-config filename
+    - shell-version.patch:
+      + Add major version to shell and js-config filenames
+  * Drop patches:
+    - aarch64-support.patch, applied in new version
+    - fix-perl-5.22.patch, this perl script doesn't exist in new version
+
+  [ Jeremy Bicha ]
+  * Refresh patches
+  * Disable patch that doesn't apply cleanly:
+    - hppa-support.patch
+
+ -- Rico Tzschichholz <ricotz@ubuntu.com>  Mon, 06 Feb 2016 11:18:23 +0200
+
+mozjs24 (24.2.0-5.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Manually mmap on arm64 to ensure high 17 bits are clear (Closes: #839050,
+    thanks to Zheng Xu)
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Sat, 07 Jan 2017 01:42:14 +0000
+
+mozjs24 (24.2.0-5) unstable; urgency=low
+
+  * Revert fix for ARM64 crashes, causes even more problems (closes: #847542).
+
+  [ John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de> ]
+  * Add support for m68k (closes: #847525).
+
+  [ Adam Borowski <kilobyte@angband.pl> ]
+  * Disable JS JIT on x32 to make SpiderMonkey build (closes: #777502).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Fri, 09 Dec 2016 22:57:52 +0000
+
+mozjs24 (24.2.0-4) unstable; urgency=low
+
+  * Backport upstream fix for ARM64 crashes (closes: #839050).
+  * Add Multi-Arch field to libmozjs-24-0 and its -dbg variant
+    (closes: #760757).
+  * Update homepage (closes: #844257).
+  * Set SHELL for running configure.
+  * Update Standards-Version to 3.9.8 .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Thu, 08 Dec 2016 19:04:08 +0000
+
+mozjs24 (24.2.0-3.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Remove not needed Build-Conflicts, that are now cousing uninstallability
+    of the Build-Depends.  Closes: #813749
+  * Add patch (taken from Ubuntu) to fix build with perl 5.22.
+
+ -- Mattia Rizzolo <mattia@debian.org>  Wed, 06 Jul 2016 22:33:32 +0000
+
+mozjs24 (24.2.0-3) unstable; urgency=low
+
+  * Update Standards-Version to 3.9.6 .
+
+  [ Pino Toscano <pino@debian.org> ]
+  * Fix FTBFS on Hurd (closes: #756218).
+
+  [ John David Anglin <dave.anglin@bell.net> ]
+  * Fix FTBFS on HPPA (closes: #757067).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 02 May 2015 13:39:40 +0000
+
+mozjs24 (24.2.0-2) unstable; urgency=low
+
+  * Make shlibs fix unconditional of Operating System (closes: #746705).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Fri, 02 May 2014 22:20:45 +0200
+
+mozjs24 (24.2.0-1) unstable; urgency=low
+
+  * Initial upload to Debian (closes: #739132).
+  * libmozjs-24-dev doesn't need ${shlibs:Depends} dependency.
+  * Add DEB_BUILD_OPTIONS nocheck option to disable build time tests.
+  * Look for 24.x upstream releases only in debian/watch .
+  * Update Standards-Version to 3.9.5 .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Thu, 27 Feb 2014 11:55:01 +0000
+
+mozjs24 (24.2.0-0ubuntu2) trusty; urgency=medium
+
+  * Drop debian/docs, which references files we no longer ship.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Fri, 14 Feb 2014 22:27:00 -0700
+
+mozjs24 (24.2.0-0ubuntu1) trusty; urgency=medium
+
+  [ Tim Lunn ]
+  * New upstream release (LP: #1279175)
+  * Bump packaging to mozjs24
+  * debian/rules:
+    - Disable intl-api
+  * debian/control:
+    - Bump build-dep on libnspr4-dev (>= 2:4.9.2)
+  * debian/patches/fix-soname.patch: Refreshed
+  * debian/watch: added
+
+  [ Dmitry Shachnev ]
+  * Update package descriptions.
+  * Make all packages except dbg ones Priority: optional.
+  * debian/copyright: Upgrade to 1.0 format, add python-which license,
+    remove unused MPL-1.1 license.
+
+ -- Tim Lunn <tim@feathertop.org>  Wed, 11 Feb 2014 21:55:34 +1100
+
+mozjs17 (17.0.0-1ubuntu1) trusty; urgency=medium
+
+  * Apply openSUSE patch to add arm64 support.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 03 Jan 2014 11:32:13 +0000
+
+mozjs17 (17.0.0-1) unstable; urgency=low
+
+  * Initial release (closes: #709434).
+  * Update to debhelper level 9.
+  * Convert to multi-arch.
+  * Fix copyright .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Wed, 18 Sep 2013 12:40:39 +0000
+
+mozjs17 (17.0.0-0ubuntu1) saucy; urgency=low
+
+  * New upstream release (LP: #1113166)
+    - Should noticably improve GNOME Shell performance by fixing
+      memory leaks and avoiding garbage collector deadlocks
+    - A separate source package is used because some rdepends like couchdb
+      won't be ready for this version any time soon
+  * Adjust packaging to new firefox versioned releases
+  * Drop .symbols files
+  * Add -dbg package
+  * debian/patches:
+    - Dropped all existing patches, they are included in new version
+    - fix-soname.patch, added to correct soname for shared library
+  * debian/rules:
+    - enable parallel build
+    - move shared library and create symlinks for standard soname versioning
+
+ -- Rico Tzschichholz <ricotz@ubuntu.com>  Sat, 25 May 2013 12:24:23 +0100

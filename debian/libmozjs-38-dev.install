@@ -1,0 +1,4 @@
+usr/bin/js38-config
+usr/include/mozjs-38
+usr/lib/*/libmozjs-38.so
+usr/lib/*/pkgconfig/mozjs-38.pc

@@ -1,0 +1,43 @@
+Source: mozjs38
+Section: libs
+Priority: optional
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Build-Depends: debhelper (>= 10),
+               autoconf2.13,
+               libicu-dev,
+               libffi-dev,
+               libnspr4-dev (>= 2:4.9.2),
+               libreadline-dev,
+               zlib1g-dev (>= 1:1.2.3),
+               pkg-config,
+               pkg-kde-tools,
+               python-dev,
+               zip
+Standards-Version: 3.9.8
+Homepage: https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/Releases/38
+
+Package: libmozjs-38-0
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Spidermonkey JavaScript engine
+ SpiderMonkey is the code-name for the Mozilla's C++ implementation of
+ JavaScript. It is intended to be embedded in other applications
+ that provide host environments for JavaScript.
+
+Package: libmozjs-38-dev
+Architecture: any
+Section: libdevel
+Depends: libmozjs-38-0 (= ${binary:Version}),
+         libffi-dev,
+         libnspr4-dev (>= 2:4.9.2),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: Spidermonkey JavaScript library - development headers
+ SpiderMonkey is the code-name for the Mozilla's C++ implementation of
+ JavaScript. It is intended to be embedded in other applications
+ that provide host environments for JavaScript.
+ .
+ This package contains the header files and static library which is
+ needed for developing Spidermonkey embedders.

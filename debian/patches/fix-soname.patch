@@ -1,0 +1,30 @@
+Description: fix soname to Debian package name
+ Add soname switch to linker, regardless of Operating System.
+Author: Rico Tzschichholz <ricotz@ubuntu.com>
+Last-Update: 2015-05-04
+
+---
+
+Index: b/config/rules.mk
+===================================================================
+--- a/config/rules.mk
++++ b/config/rules.mk
+@@ -457,7 +457,7 @@
+ #
+ # Linux: add -Bsymbolic flag for components
+ #
+-ifeq ($(OS_ARCH),Linux)
++#ifeq ($(OS_ARCH),Linux)
+ ifdef IS_COMPONENT
+ EXTRA_DSO_LDOPTS += -Wl,-Bsymbolic
+ endif
+@@ -465,7 +465,8 @@
+ EXTRA_DSO_LDOPTS += -Wl,--version-script,$(LD_VERSION_SCRIPT)
+ EXTRA_DEPS += $(LD_VERSION_SCRIPT)
+ endif
+-endif
++EXTRA_DSO_LDOPTS += -Wl,-soname,lib$(LIBRARY_NAME).so.0
++#endif
+ 
+ #
+ # GNU doesn't have path length limitation

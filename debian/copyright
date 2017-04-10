@@ -1,0 +1,474 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Spidermonkey
+Source: http://ftp.mozilla.org/pub/mozilla.org/js/
+Files-Excluded:
+ browser
+ dom
+ media
+ security
+
+License: MPL-2.0
+ This Source Code Form is subject to the terms of the Mozilla Public
+ License, version 2.0.
+ .
+ The complete text of the Mozilla Public License can be found in
+ the `LICENSE' file in the source tarball or online at
+ <http://mozilla.org/MPL/2.0/>.
+
+License: GPL-2
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, version 2 of the License.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License can be found in the file /usr/share/common-licenses/GPL-2'.
+
+License: LGPL-2.1
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301 USA
+ .
+ On Debian systems, the complete text of the GNU Lesser General Public
+ License can be found in the file `/usr/share/common-licenses/LGPL-2.1'.
+
+License: BSD-2-Clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the
+    distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+ FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+ COPYRIGHT HOLDERS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY OR CONSEQUENTIAL DAMAGES (INCLUDING,
+ BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
+ AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
+ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ SUCH DAMAGE.
+
+License: BSD-3-Clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the
+    distribution.
+ 3. Neither the name of The DragonFly Project nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific, prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+ FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE
+ COPYRIGHT HOLDERS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY OR CONSEQUENTIAL DAMAGES (INCLUDING,
+ BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
+ AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
+ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ SUCH DAMAGE.
+
+License: MIT
+ Permission is hereby granted, free of charge, to any person obtaining
+ a copy of this software and associated documentation files (the
+ "Software"), to deal in the Software without restriction, including
+ without limitation the rights to use, copy, modify, merge, publish,
+ distribute, sublicense, and/or sell copies of the Software, and to
+ permit persons to whom the Software is furnished to do so, subject to
+ the following conditions:
+ .
+ The above copyright notice and this permission notice shall be
+ included in all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Files: *
+Copyright: 2005-2014 Mozilla Corporation
+License: MPL-2.0
+
+Files: js/src/dtoa.c
+Copyright: 1991, 2000, 2001 Lucent Technologies
+License: Other
+ Permission to use, copy, modify, and distribute this software for any
+ purpose without fee is hereby granted, provided that this entire notice
+ is included in all copies of any software which is or includes a copy
+ or modification of this software and in all copies of the supporting
+ documentation for such software.
+ .
+ THIS SOFTWARE IS BEING PROVIDED "AS IS", WITHOUT ANY EXPRESS OR IMPLIED
+ WARRANTY.  IN PARTICULAR, NEITHER THE AUTHOR NOR LUCENT MAKES ANY
+ REPRESENTATION OR WARRANTY OF ANY KIND CONCERNING THE MERCHANTABILITY
+ OF THIS SOFTWARE OR ITS FITNESS FOR ANY PARTICULAR PURPOSE.
+
+Files: js/src/assembler/assembler/AbstractMacroAssembler.h
+ js/src/assembler/assembler/AssemblerBuffer.h
+ js/src/assembler/assembler/CodeLocation.h
+ js/src/assembler/assembler/LinkBuffer.h
+ js/src/assembler/assembler/MacroAssemblerCodeRef.h
+ js/src/assembler/assembler/MacroAssembler.h
+ js/src/assembler/assembler/MacroAssemblerX86_64.h
+ js/src/assembler/assembler/MacroAssemblerX86Common.h
+ js/src/assembler/assembler/MacroAssemblerX86.h
+ js/src/assembler/assembler/RepatchBuffer.h
+ js/src/assembler/assembler/X86Assembler.h
+ js/src/assembler/jit/ExecutableAllocator.cpp
+ js/src/assembler/jit/ExecutableAllocator.h
+ js/src/assembler/jit/ExecutableAllocatorOS2.cpp
+ js/src/assembler/jit/ExecutableAllocatorPosix.cpp
+ js/src/assembler/jit/ExecutableAllocatorWin.cpp
+ js/src/assembler/wtf/Assertions.h
+ js/src/assembler/wtf/SegmentedVector.h
+ js/src/assembler/wtf/VMTags.h
+ js/src/yarr/*
+Copyright: 2003-2009 Apple Inc.
+License: BSD-2-Clause
+
+Files: js/src/assembler/assembler/ARMAssembler.cpp
+ js/src/assembler/assembler/ARMAssembler.h 
+ js/src/assembler/assembler/AssemblerBufferWithConstantPool.h
+ js/src/assembler/assembler/MacroAssemblerARM.cpp
+Copyright: 2009-2010 University of Szeged
+License: BSD-2-Clause
+
+Files: js/src/assembler/assembler/ARMv7Assembler.h
+ js/src/assembler/assembler/MacroAssemblerARM.h
+ js/src/assembler/assembler/MacroAssemblerARMv7.h
+Copyright: 2009-2010 University of Szeged
+ 2008-2009 Apple Inc.
+License: BSD-2-Clause
+
+Files: js/src/assembler/assembler/MacroAssemblerMIPS.h
+Copyright: 2010 MIPS Technologies, Inc.,
+ 2008 Apple Inc.
+License: BSD-2-Clause
+
+Files: js/src/assembler/assembler/MIPSAssembler.h
+Copyright: 2010 MIPS Technologies, Inc.,
+ 2009 University of Szeged,
+ 2009 Apple Inc.
+License: BSD-2-Clause
+
+Files: js/src/assembler/wtf/Assertions.cpp
+Copyright: 2007-2009 Torch Mobile, Inc.,
+ 2003, 2006, 2007 Apple Inc.
+License: BSD-2-Clause
+
+Files: js/src/assembler/wtf/Platform.h
+Copyright: 2010 Research In Motion Limited,
+ 2007-2009 Torch Mobile, Inc.,
+ 2006, 2007, 2008, 2009 Apple Inc.
+License: BSD-2-Clause
+
+Files: js/src/assembler/jit/ExecutableAllocatorSymbian.cpp
+Copyright: 2009 Nokia Corporation and/or its subsidiary(-ies)
+License: LGPL-2+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.    See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the
+ Free Software Foundation, Inc., 51 Franklin Street - Suite 500,
+ Boston, MA 02110-1335, USA.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License can be found in `/usr/share/common-licenses/LGPL-2'.
+
+Files: js/src/builtin/js2c.py
+ js/src/builtin/jsmin.py
+ js/src/builtin/macros.py
+Copyright: 2006-2012 the V8 project authors
+License: BSD-3-Clause
+
+Files: js/src/config/mkdepend/*
+Copyright: 1992 Network Computing Devices, Inc.
+           1993, 1994, 1998 The Open Group
+License: Other
+ Permission to use, copy, modify, distribute, and sell this software and its
+ documentation for any purpose is hereby granted without fee, provided that
+ the above copyright notice appear in all copies and that both that
+ copyright notice and this permission notice appear in supporting
+ documentation.
+ .
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+ OPEN GROUP BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN
+ AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Files: js/src/config/mkdepend/imakemdep.h
+Copyright: 1993, 1994 X Consortium
+License: MIT
+
+Files: js/src/ctypes/libffi/*
+Copyright: 1996-2003, 2007-2008, Red Hat, Inc.
+           2002, 2006-2009, Free Software Foundation, Inc
+           2009, Bradley Smith <brad@brad-smith.co.uk>
+           1998, Cygnus Solutions
+           2004, Simon Posnjak
+           2005, Axis Communications AB
+           2004, 2009, Anthony Green
+           2000, Hewlett Packard Company
+           2004, Renesas Technology
+           2008, David Daney
+           2003-2004, Randolph Chung <tausq@debian.org>
+           1998, Geoffrey Keating
+           2001, John Hornkvist
+           2000, 2007, Software AG
+           2002-2008, Kaz Kojima
+           2002, Ranjit Mathew
+           2002, Bo Thorsen
+           2002, Roger Sayle
+License: MIT
+
+Files: js/src/jit-test/tests/arguments/strict-args.js
+       js/src/jit-test/tests/arguments/strict-nested-shadow-eval.js
+       js/src/jit-test/tests/arguments/nonstrict-assign.js
+       js/src/jit-test/tests/arguments/strict-nested-assign-shadowed-var.js
+       js/src/jit-test/tests/arguments/nonstrict-noargs.js
+       js/src/jit-test/tests/arguments/strict-nested-assign-shadow-function.js
+       js/src/jit-test/tests/arguments/strict-assign-outer-param.js
+       js/src/jit-test/tests/arguments/strict-nested-assign-shadowed-catch.js
+       js/src/jit-test/tests/arguments/nonstrict-assign-parameter-get-element.js
+       js/src/jit-test/tests/arguments/nonstrict-assign-element-get-parameter.js
+       js/src/jit-test/tests/arguments/strict-assign-after.js
+       js/src/jit-test/tests/arguments/strict-eval-mutation.js
+       js/src/jit-test/tests/arguments/strict-assign.js
+       js/src/jit-test/tests/arguments/strict-nested-assign-shadowed-catch-call.js
+       js/src/jit-test/tests/arguments/strict-nested-shadow-maybe-eval.js
+       js/src/jit-test/tests/arguments/strict-noargs.js
+       js/src/jit-test/tests/arguments/strict-nested-assign-shadow-function-name.js
+       js/src/jit-test/tests/arguments/strict-nested-eval.js
+       js/src/jit-test/tests/arguments/strict-eval.js
+       js/src/jit-test/tests/arguments/nonstrict-args.js
+       js/src/jit-test/tests/arguments/strict-assign-outer-param-psych.js
+       js/src/jit-test/tests/arguments/strict-assign-parameter-get-element.js
+       js/src/jit-test/tests/arguments/strict-maybe-assign-outer.js
+       js/src/jit-test/tests/arguments/nonstrict-later-assign.js
+       js/src/jit-test/tests/arguments/strict-maybe-nested-eval.js
+       js/src/jit-test/tests/arguments/strict-args-flushstack.js
+       js/src/jit-test/tests/arguments/strict-assign-arguments-element.js
+       js/src/jit-test/tests/arguments/strict-args-generator-flushstack.js
+       js/src/jit-test/tests/arguments/strict-nested-assign-shadow-function-call.js
+       js/src/jit-test/tests/basic/bug584565.js
+       js/src/jit-test/tests/basic/bug586917.js
+       js/src/jit-test/tests/basic/wrap-primitive-this.js
+       js/src/jit-test/tests/basic/bug513898-regexp.js
+       js/src/jit-test/tests/basic/bug625141-2.js
+       js/src/jit-test/tests/basic/bug625141-1.js
+Copyright: not applicable
+License: public-domain
+ The files listed have been put on the public domain by the Mozilla
+ contributors, as stated in the license headers of each file.
+
+Files: js/src/yarr/Yarr.h
+ js/src/yarr/YarrInterpreter.cpp
+ js/src/yarr/YarrPattern.cpp
+ js/src/yarr/YarrPattern.h
+Copyright: 2010 Peter Varga <pvarga@inf.u-szeged.hu>,
+ 2010 University of Szeged,
+ 2009 Apple Inc.
+License: BSD-2-Clause
+
+Files: js/src/jit-test/tests/sunspider/*
+ js/src/metrics/jint/sunspider/*
+Copyright: 2007 Apple Inc.,
+ 2005 Bob Ippolito,
+ 2004 Arthur Langereis,
+ 1999-2002 Paul Johnston,
+ Arthur Langereis,
+ Ian Osgood,
+ Isaac Gouy,
+ Jesse Millikan,
+ Rich Moore,
+ Simon Speich
+License: BSD-2-Clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+
+Files: js/src/jit-test/tests/v8-v5/check-crypto.js
+ js/src/v8/crypto.js
+Copyright: 2003-2005 Tom Wu
+License: MIT
+
+Files: js/src/jit-test/tests/v8-v5/check-deltablue.js
+ js/src/v8/deltablue.js
+Copyright: 2008 the V8 project authors
+           2008 Google
+           1996 John Maloney
+           1996 Mario Wolczko
+License: GPL-2+
+ This program is free software; you can redistribute it
+ and/or modify it under the terms of the GNU General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later
+ version.
+ .
+ This program is distributed in the hope that it will be
+ useful, but WITHOUT ANY WARRANTY; without even the implied
+ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+ PURPOSE.  See the GNU General Public License for more
+ details.
+ .
+ You should have received a copy of the GNU General Public
+ License along with this package; if not, write to the Free
+ Software Foundation, Inc., 51 Franklin St, Fifth Floor,
+ Boston, MA  02110-1301 USA
+ .
+ On Debian systems, the full text of the GNU General Public License
+ version 2 can be found in the file `/usr/share/common-licenses/GPL-2'.
+
+Files: js/src/jit-test/v8-v5/check-regexp.js
+       js/src/jit-test/v8-v5/check-richards.js
+       js/src/jit-test/v8-v5/check-splay.js
+       js/src/metrics/jint/v8/base.js
+       js/src/metrics/jint/v8/crypto.js
+       js/src/metrics/jint/v8/deltablue.js
+       js/src/metrics/jint/v8/richards.js
+       js/src/metrics/jint/v8/run-earley-boyer.js
+       js/src/metrics/jint/v8/run-raytrace.js
+       js/src/metrics/jint/v8/run-richards.js
+       js/src/metrics/jint/v8/run.js
+       js/src/v8/base.js
+       js/src/v8/crypto.js
+       js/src/v8/deltablue.js
+       js/src/v8/richards.js
+       js/src/v8/run-crypto.js
+       js/src/v8/run-deltablue.js
+       js/src/v8/run-earley-boyer.js
+       js/src/v8/run-raytrace.js
+       js/src/v8/run-richards.js
+       js/src/v8/run.js
+       js/src/v8-dtoa/*
+Copyright: 2006-2010 the V8 project authors
+           2007, 2008 Google
+License: BSD-3-Clause
+
+Files: js/src/metrics/jint/sunspider/crypto-md5.js
+       js/src/metrics/jint/sunspider/crypto-sha1.js
+       js/src/metrics/jint/sunspider/math-cordic.js
+Copyright: 2007 Apple Inc.,
+ 1999-2002 Paul Johnston,
+ Greg Holt,
+ Andrew Kepert,
+ Ydnar,
+ Lostinet,
+ Rich Moore
+License: BSD-2-Clause
+
+Files: js/src/jit-test/tests/sunspider/check-date-format-xparb.js
+ js/src/metrics/jint/sunspider/date-format-xparb.js
+Copyright: 2004 Baron Schwartz
+License: LGPL-2.1
+
+Files: js/src/python/which/*
+Copyright: 2002-2005 ActiveState Corp.
+License:
+ Permission is hereby granted, free of charge, to any person obtaining a
+ copy of this software and associated documentation files (the
+ "Software"), to deal in the Software without restriction, including
+ without limitation the rights to use, copy, modify, merge, publish,
+ distribute, sublicense, and/or sell copies of the Software, and to
+ permit persons to whom the Software is furnished to do so, subject to
+ the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included
+ in all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+ OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Files: mfbt/MSStdInt.h
+Copyright: 2006-2008 Alexander Chemeris
+License: BSD-3-Clause
+
+Files: intl/icu/*
+Copyright: 1995-2012 International Business Machines Corporation and others
+License: ICU License 1.8.1+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, and/or sell copies of the
+ Software, and to permit persons to whom the Software is furnished to do so,
+ provided that the above copyright notice(s) and this permission notice appear
+ in all copies of the Software and that both the above copyright notice(s) and
+ this permission notice appear in supporting documentation.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS.
+ IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE BE
+ LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY
+ DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+ CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+ .
+ Except as contained in this notice, the name of a copyright holder shall not
+ be used in advertising or otherwise to promote the sale, use or other dealings
+ in this Software without prior written authorization of the copyright holder.
+
+Files: debian/*
+Copyright: 2013- Laszlo Boszormenyi (GCS) <gcs@debian.org>,
+ 2010 Canonical Ltd.
+License: GPL-2

@@ -1,0 +1,21 @@
+Description: Install js-config.h
+Author: Rico Tzschichholz <ricotz@ubuntu.com>
+Forwarded: no
+Last-Update: 2014-10-29
+
+---
+
+diff -r d071f8dfe4d6 js/src/Makefile.in
+--- a/js/src/Makefile.in	Wed Sep 17 11:21:14 2014 -0400
++++ b/js/src/Makefile.in	Wed Oct 29 15:23:10 2014 +0100
+@@ -88,6 +88,9 @@
+ jsconfig_DEST = $(DIST)/include
+ jsconfig_TARGET := export
+ 
++install:: $(export_files)
++	$(SYSINSTALL) $^ $(DESTDIR)$(includedir)
++
+ include $(topsrcdir)/config/rules.mk
+ 
+ #############################################
+

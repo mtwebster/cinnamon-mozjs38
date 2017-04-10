@@ -1,0 +1,13 @@
+fix-gcc6-segfault.patch
+fix-tracelogger.patch
+fix-soname.patch
+hurd-support.patch
+#hppa-support.patch
+m68k-support.patch
+Disable-js-JIT-on-x32.patch
+manually-mmap-on-arm64-to-ensure-high-17-bits-are-clear.patch
+copy-headers.patch
+install-js-config-h.patch
+shell-version.patch
+pkg-config-version.patch
+fix-icu-check.patch
