@@ -4387,7 +4387,12 @@ class JSErrorReport
     const char16_t* ucmessage;     /* the (default) error message */
     const char16_t** messageArgs;  /* arguments for the error message */
     int16_t         exnType;        /* One of the JSExnType constants */
+
+#if  !defined(__mc68000__)
 };
+#else
+} __attribute__ ((aligned(4)));     /* enforce 32-bit alignment on m68k */
+#endif
 
 /*
  * JSErrorReport flag values.  These may be freely composed.
